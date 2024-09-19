@@ -45,3 +45,8 @@ wwwroot/js/
 # Publish outputs
 /publish/
 /out/
+
+#Ignore local images
+wwwroot/colours/
+wwwroot/home/
+wwwroot/animals/
