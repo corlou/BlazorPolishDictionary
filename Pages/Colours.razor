@@ -1,0 +1,31 @@
+@page "/colours"
+
+<PageTitle>Colours</PageTitle>
+
+<h1>Colours</h1>
+
+<div class="d-flex flex-wrap justify-content-between">
+  @foreach (var colour in colours)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="colours/@colour.Image" alt="Image of @colour.English" />
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <span>@colour.English</span>
+          <span>@colour.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> colours = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "red.png", English = "Red", Polish = "Czerwony" },
+        new DefinitionWithImage { Image = "orange.png", English = "Orange", Polish = "Pomarańczowy" },
+        new DefinitionWithImage { Image = "yellow.png", English = "Yellow", Polish = "Żółty" },
+        new DefinitionWithImage { Image = "green.png", English = "Green", Polish = "Zielony" },
+        new DefinitionWithImage { Image = "blue.png", English = "Blue", Polish = "Niebieski" },
+    };
+}

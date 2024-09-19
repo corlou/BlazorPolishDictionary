@@ -1,0 +1,30 @@
+@page "/animals"
+
+<PageTitle>Animals</PageTitle>
+
+<h1>Animals</h1>
+
+<div class="d-flex flex-wrap justify-content-between">
+  @foreach (var animal in animals)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/images/@animal.Image" alt="Image of @animal.English" />
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <span>@animal.English</span>
+          <span>@animal.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> animals = new List<DefinitionWithImage>
+    {
+        new DefinitionWithImage { Image = "ant.png", English = "Ant", Polish = "Mrówka" },
+        new DefinitionWithImage { Image = "bear.png", English = "Bear", Polish = "Niedźwiedź" },
+        new DefinitionWithImage { Image = "bee.png", English = "Bee", Polish = "Pszczoła" },
+        new DefinitionWithImage { Image = "bird.png", English = "Bird", Polish = "Ptak" },
+    };
+}
