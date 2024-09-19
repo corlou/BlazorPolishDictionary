@@ -1,0 +1,31 @@
+@page "/hobbies"
+
+<PageTitle>Hobbies</PageTitle>
+
+<h1>Hobbies</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var hobby in hobbies)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="hobbies/@hobby.Image" alt="Image of @hobby.English" />
+      <div class="card-body">
+        <div>
+          <span>@hobby.English</span>
+          <span>@hobby.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> hobbies = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "basketball.png", English = "Basketball", Polish = "Koszykówka" },
+        new DefinitionWithImage { Image = "cook.png", English = "Cook", Polish = "Gotować" },
+        new DefinitionWithImage { Image = "dance.png", English = "Dance", Polish = "Taniec" },
+        new DefinitionWithImage { Image = "football.png", English = "Football", Polish = "Piłka Nożna" },
+        new DefinitionWithImage { Image = "gym.png", English = "Gym", Polish = "Gimnastyka" },
+    };
+}

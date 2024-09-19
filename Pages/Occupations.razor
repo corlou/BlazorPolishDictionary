@@ -1,0 +1,31 @@
+@page "/occupations"
+
+<PageTitle>Occupations</PageTitle>
+
+<h1>Occupations</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var occupation in occupations)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="occupations/@occupation.Image" alt="Image of @occupation.Male" />
+      <div class="card-body">
+        <div>
+          <span>@occupation.Male</span>
+          <span>@occupation.Female</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionPolish> occupations = new List<DefinitionPolish>
+    {
+      new DefinitionPolish { Image = "accountant.png", Male = "Księgowy", Female = "Księgowka" },
+        new DefinitionPolish { Image = "artist.png", Male = "Artysta", Female = "Artystka" },
+        new DefinitionPolish { Image = "author.png", Male = "Autor", Female = "Autorka" },
+        new DefinitionPolish { Image = "baker.png", Male = "Piekarz", Female = "Piekkarka" },
+        new DefinitionPolish { Image = "barman.png", Male = "Barman", Female = "Barmanka" },
+    };
+}
