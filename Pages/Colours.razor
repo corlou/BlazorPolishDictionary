@@ -4,13 +4,13 @@
 
 <h1>Colours</h1>
 
-<div class="d-flex flex-wrap justify-content-between">
+<div class="card-container d-flex flex-wrap">
   @foreach (var colour in colours)
   {
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="colours/@colour.Image" alt="Image of @colour.English" />
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div>
           <span>@colour.English</span>
           <span>@colour.Polish</span>
         </div>

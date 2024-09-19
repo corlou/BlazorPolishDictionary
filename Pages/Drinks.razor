@@ -1,0 +1,31 @@
+@page "/drinks"
+
+<PageTitle>Drinks</PageTitle>
+
+<h1>Drinks</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var drink in drinks)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="drinks/@drink.Image" alt="Image of @drink.English" />
+      <div class="card-body">
+        <div>
+          <span>@drink.English</span>
+          <span>@drink.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> drinks = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "beer.png", English = "Beer", Polish = "Piwo" },
+        new DefinitionWithImage { Image = "coffee.png", English = "Coffee", Polish = "Kawa" },
+        new DefinitionWithImage { Image = "cola.png", English = "Cola", Polish = "Cola" },
+        new DefinitionWithImage { Image = "juice.png", English = "Juice", Polish = "Sok" },
+        new DefinitionWithImage { Image = "cocktail.png", English = "Cocktail", Polish = "Koktajl" },
+    };
+}

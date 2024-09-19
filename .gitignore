@@ -47,6 +47,7 @@ wwwroot/js/
 /out/
 
 #Ignore local images
-wwwroot/colours/
 wwwroot/home/
 wwwroot/animals/
+wwwroot/colours/
+wwwroot/drinks/

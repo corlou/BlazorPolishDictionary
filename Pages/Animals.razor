@@ -4,13 +4,13 @@
 
 <h1>Animals</h1>
 
-<div class="d-flex flex-wrap justify-content-between">
+<div class="card-container d-flex flex-wrap">
   @foreach (var animal in animals)
   {
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="/animals/@animal.Image" alt="Image of @animal.English" />
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div>
           <span>@animal.English</span>
           <span>@animal.Polish</span>
         </div>
@@ -26,5 +26,6 @@
         new DefinitionWithImage { Image = "bear.png", English = "Bear", Polish = "Niedźwiedź" },
         new DefinitionWithImage { Image = "bee.png", English = "Bee", Polish = "Pszczoła" },
         new DefinitionWithImage { Image = "bird.png", English = "Bird", Polish = "Ptak" },
+        new DefinitionWithImage { Image = "butterfly.png", English = "Butterfly", Polish = "Motyl" },
     };
 }
