@@ -1,0 +1,94 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorPolishDictionary</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div>
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door"></span> Home
+            </NavLink>
+        </div>
+         <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-file-font"></i> Alphabet
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-piggy-bank"></i> Animals
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-palette"></i> Colours
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-cup-straw"></i> Drinks
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-egg-fried"></i> Food
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-brush"></i> Hobbies
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-123"></i> Numbers
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-briefcase"></i> Occupations
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-people"></i> People
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-alarm"></i> Time
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-truck-front"></i> Transport
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-book"></i> Verbs
+          </NavLink>
+        </div>
+        <div>
+          <NavLink class="nav-link" href="counter">
+              <i class="bi bi-cloud-sun"></i> Weather
+          </NavLink>
+        </div>
+    </nav> 
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

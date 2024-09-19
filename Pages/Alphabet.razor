@@ -1,0 +1,32 @@
+@page "/alphabet"
+
+<PageTitle>Alphabet</PageTitle>
+
+<h1>Alphabet</h1>
+
+<table class="table table-striped table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Letter</th>
+      <th scope="col">Tips</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var definition in definitions)
+    {
+      <tr>
+        <td>@definition.Polish</td>
+        <td>@definition.English</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+@code {
+  private List<Definition> definitions = new List<Definition>
+  {
+    new Definition { English = "'a' in large", Polish = "A a" },
+    new Definition { English = "Nasal o like in o in own", Polish = "Ą ą'" },
+    new Definition { English = "beh", Polish = "B b" }
+  };
+}
