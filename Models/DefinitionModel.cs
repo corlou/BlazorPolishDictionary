@@ -9,9 +9,8 @@ public class DefinitionWithImage : Definition
   public required string Image { get; set; }
 }
 
-public class DefinitionWithImageLink : Definition
+public class DefinitionWithImageLink : DefinitionWithImage
 {
-  public required string Image { get; set; }
   public required string Target { get; set; } 
 }
 
