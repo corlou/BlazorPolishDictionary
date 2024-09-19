@@ -1,0 +1,31 @@
+@page "/transport"
+
+<PageTitle>Transport</PageTitle>
+
+<h1>Transport</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var transport in transports)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="transport/@transport.Image" alt="Image of @transport.English" />
+      <div class="card-body">
+        <div>
+          <span>@transport.English</span>
+          <span>@transport.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> transports = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "aeroplane.png", English = "Aeroplane", Polish = "Samolot" },
+        new DefinitionWithImage { Image = "bike.png", English = "Bicycle", Polish = "Rower" },
+        new DefinitionWithImage { Image = "boat.png", English = "Boat", Polish = "Łódź" },
+        new DefinitionWithImage { Image = "bus.png", English = "Bus", Polish = "Autobus" },
+        new DefinitionWithImage { Image = "car.png", English = "Car", Polish = "Samochód" },
+    };
+}

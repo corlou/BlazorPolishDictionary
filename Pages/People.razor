@@ -1,0 +1,31 @@
+@page "/people"
+
+<PageTitle>People</PageTitle>
+
+<h1>People</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var people in peoples)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="people/@people.Image" alt="Image of @people.English" />
+      <div class="card-body">
+        <div>
+          <span>@people.English</span>
+          <span>@people.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> peoples = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "boss.png", English = "Boss", Polish = "Szef" },
+        new DefinitionWithImage { Image = "boyfriend.png", English = "Boyfriend", Polish = "Chłopak" },
+        new DefinitionWithImage { Image = "brother.png", English = "Brother", Polish = "Brat" },
+        new DefinitionWithImage { Image = "colleague.png", English = "Colleague", Polish = "Współpracownik" },
+        new DefinitionWithImage { Image = "cousin.png", English = "Cousin", Polish = "Kuzyn" },
+    };
+}

@@ -1,0 +1,32 @@
+@page "/weather"
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+<div class="card-container d-flex flex-wrap">
+  @foreach (var weather in weathers)
+  {
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="weather/@weather.Image" alt="Image of @weather.English" />
+      <div class="card-body">
+        <div>
+          <span>@weather.English</span>
+          <span>@weather.Polish</span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@code {
+  private List<DefinitionWithImage> weathers = new List<DefinitionWithImage>
+    {
+      new DefinitionWithImage { Image = "chilly.png", English = "Chilly", Polish = "Chłodno" },
+        new DefinitionWithImage { Image = "cloudy.png", English = "Cloudy", Polish = "Pochmurno" },
+        new DefinitionWithImage { Image = "dry.png", English = "Dry", Polish = "Sucho" },
+        new DefinitionWithImage { Image = "fog.png", English = "Fog", Polish = "Mgła" },
+        new DefinitionWithImage { Image = "hail.png", English = "Hail", Polish = "Grad" },
+        new DefinitionWithImage { Image = "warm.png", English = "Warm", Polish = "Ciepło" },
+    };
+}
