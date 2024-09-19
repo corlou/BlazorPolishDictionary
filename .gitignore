@@ -1,0 +1,47 @@
+# Ignore build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Logs
+*.log
+
+# Compiled files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+
+# VS Code directories
+.vscode/
+
+# Rider/JetBrains IDE directories
+.idea/
+
+# Local environment files
+*.env
+.env.*
+
+# ASP.NET Core secrets
+**/secrets.json
+
+# Mac OS specific files
+.DS_Store
+.DS_Store?
+
+# npm package directories (if you have npm dependencies)
+node_modules/
+
+# Generated static assets (for Blazor)
+wwwroot/css/
+wwwroot/js/
+
+# Publish outputs
+/publish/
+/out/
